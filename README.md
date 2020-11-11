@@ -1,13 +1,14 @@
 # Planetas do Starwars API
 
 ##Menu
+
 - [Introdução](#Introdução)
 - [Instalação](#Instalação)
 - [Swagger](#Swagger)
 - [Endpoints](#Endpoints)
 - [Modelo](#Modelo)
 - [Exception](#Exception)
-- [Tecnologias Utilizadas](#Tecnologias utilizadas)
+- [Tecnologias Utilizadas](#Tecnologias-utilizadas)
 
 ##Introdução
 
@@ -26,6 +27,7 @@ O Serviço tem como objetivo fornecer as informações sobre os planetas existen
 ##Instalação
 
 ####Requisitos:
+
 - [Java 15](https://www.oracle.com/br/java/technologies/javase-downloads.html)
 - [Maven](https://maven.apache.org/)
 
@@ -35,6 +37,7 @@ mvn spring-boot:run
 ```
 
 ##Swagger
+
 A Documentação da API também está disponível no [Swagger](https://swagger.io/) pelo Endpoint:
 ```bash
 https://planetas-do-starwars-api.herokuapp.com/swagger-ui/
@@ -43,6 +46,7 @@ https://planetas-do-starwars-api.herokuapp.com/swagger-ui/
 ##Endpoints
 
 ### Busca de planetas
+
 Método responsável pela busca dos planetas
 
 - Endpoint
@@ -115,6 +119,7 @@ Método responsável pela busca dos planetas
 ```
 
 **HTTP 404**: Planeta não encontrado
+
 ```json
 {
  "Erro": "Planeta não encontrado"
@@ -122,6 +127,7 @@ Método responsável pela busca dos planetas
 ```
 
 ### Busca do planeta pelo id
+
 Método responsável pela busca ao planeta pelo id
 
 - **Endpoint**
@@ -180,6 +186,7 @@ Método responsável pela busca ao planeta pelo id
 ```
 
 ### Criação do planeta
+
 Método responsável pela criação do planeta
 
 - **Endpoint**
@@ -258,9 +265,11 @@ Método responsável pela exclusão do planeta
 ```
 
 ## Modelo
+
 Segue abaixo o modelo dos objetos utilizados:
 
 ### PlanetVO
+
 Modelo da representação do Planeta
 
 Atributo | Tipo | Descrição
@@ -272,6 +281,7 @@ Terrain | String | Terrenos do planeta
 Films | List< Film >| Array com os Filmes Participados
 
 ### Film
+
 Modelo da representação do Filme
 
 Atributo | Tipo | Descrição
@@ -279,13 +289,16 @@ Atributo | Tipo | Descrição
 Title | String | Nome do Filme
 
 ## Exception
+
 As seguintes Exceptions foram utilizadas:
 
 ### PlanetNotFoundException
+
 A "PlanetNotFoundException" é disparada quando é feito uma busca e não é encontrado um planeta.
 
 
 ## Tecnologias utilizadas
+
 Foram utilizados os seguintes frameworks e/ou ferramentas:
 
 - Java 15
