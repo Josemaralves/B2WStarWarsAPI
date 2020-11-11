@@ -9,9 +9,11 @@ import reactor.netty.http.client.HttpClient;
 @Component
 public class WebClientSwapi {
 
+    private static final String URL_SWAPI = "https://swapi.dev/";
+
     @Bean
     public WebClient webClientStarWarsPlanet(WebClient.Builder builder){
-        return builder.baseUrl("https://swapi.dev/").build();
+        return builder.baseUrl(URL_SWAPI).build();
     }
 
     @Bean

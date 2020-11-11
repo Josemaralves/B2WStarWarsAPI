@@ -95,6 +95,7 @@ public class PlanetResourceTest {
     void findByName(){
 
         Mockito.when(planetRepository.findAllByName(getPlanet().getName())).thenReturn(Flux.just(getPlanet()));
+        Mockito.when(filmsService.getFilmsByPlanetName(getPlanet().getName())).thenReturn(Flux.just(new Film()));
 
         webTestClient.get().uri(uriBuilder -> uriBuilder.path("/planet/search").queryParam("name", getPlanet().getName()).build())
                 .exchange()

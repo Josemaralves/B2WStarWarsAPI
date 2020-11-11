@@ -238,7 +238,7 @@ Método responsável pela exclusão do planeta
 
 - **Endpoint**
 
-    https://planetas-do-starwars-api.herokuapp.com/planets/{id}
+    https://planetas-do-starwars-api.herokuapp.com/planet/{id}
 - Método HTTP
 - DELETE
 - **Query Parameters**

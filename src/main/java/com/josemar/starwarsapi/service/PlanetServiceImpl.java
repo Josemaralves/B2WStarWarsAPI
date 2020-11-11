@@ -25,10 +25,10 @@ public class PlanetServiceImpl implements PlanetService {
     @Override
     public Flux<PlanetVO> findPlanet(String name)  {
         if(!StringUtils.isEmpty(name))
-            return planetRepository.findAllByName(name).flatMap(planetVO ->
+            return planetRepository.findAllByName(name).switchIfEmpty(Mono.error(PlanetNotFoundException::new)).flatMap(planetVO ->
                     filmsService.getFilmsByPlanetName(planetVO.getName()).collectList().doOnNext(planetVO::setFilms).thenReturn(planetVO));
         else
-            return planetRepository.findAll().flatMap(planetVO ->
+            return planetRepository.findAll().switchIfEmpty(Mono.error(PlanetNotFoundException::new)).flatMap(planetVO ->
                     filmsService.getFilmsByPlanetName(planetVO.getName()).collectList().doOnNext(planetVO::setFilms).thenReturn(planetVO));
     }
 

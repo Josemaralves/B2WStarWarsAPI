@@ -4,7 +4,6 @@ import dev.swapi.vo.Film;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -15,12 +14,11 @@ import java.util.List;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@EqualsAndHashCode
+
 @Document(collection = "planets")
 public class PlanetVO {
 
     @Id
-    @EqualsAndHashCode.Exclude
     private String id;
 
     @ApiModelProperty("Nome do Planeta")
@@ -35,7 +33,6 @@ public class PlanetVO {
     @NotBlank(message = "O campo Terrain é obrigatorio")
     private String terrain;
 
-    @EqualsAndHashCode.Exclude
     @ApiModelProperty("Fimes que o Planeta aparece")
     private List<Film> films;
 
