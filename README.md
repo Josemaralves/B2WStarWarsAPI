@@ -1,6 +1,6 @@
 # Planetas do Starwars API
 
-##Menu
+## Menu
 
 - [Introdução](#Introdução)
 - [Instalação](#Instalação)
@@ -10,7 +10,7 @@
 - [Exception](#Exception)
 - [Tecnologias Utilizadas](#Tecnologias-utilizadas)
 
-##Introdução
+## Introdução
 
 O "Planetas do Starwars API" é um serviço montado utilizando a arquitetura RestFul.
 O Serviço tem como objetivo fornecer as informações sobre os planetas existentes no mundo do Star Wars, sendo possivel:
@@ -24,9 +24,9 @@ O Serviço tem como objetivo fornecer as informações sobre os planetas existen
 
  >A Informação de quais planetas aparecem nos filmes é provida pelo https://swapi.dev/.
 
-##Instalação
+## Instalação
 
-####Requisitos:
+#### Requisitos:
 
 - [Java 15](https://www.oracle.com/br/java/technologies/javase-downloads.html)
 - [Maven](https://maven.apache.org/)
@@ -36,14 +36,14 @@ Para iniciar o projeto, basta ter o [Maven](https://maven.apache.org/) configura
 mvn spring-boot:run
 ```
 
-##Swagger
+## Swagger
 
 A Documentação da API também está disponível no [Swagger](https://swagger.io/) pelo Endpoint:
 ```bash
 https://planetas-do-starwars-api.herokuapp.com/swagger-ui/
 ```
 
-##Endpoints
+## Endpoints
 
 ### Busca de planetas
 
